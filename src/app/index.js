@@ -1,8 +1,16 @@
+import { Fragment } from 'react'
+
+
+import MainLayout from './layouts/MainLayout'
+import Routing from './routing'
+
 const App = () => {
   return (
-    <div>
-      Tita Media
-    </div>
+    <Fragment>
+      <MainLayout>
+        <Routing />
+      </MainLayout>
+    </Fragment>
   )
 }
 
