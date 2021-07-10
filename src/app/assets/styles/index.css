@@ -1,8 +1,40 @@
 /* variables */
 :root {
   --primary-color: #FF5672;
-  --secondary-color: #707070;
+  --secondary-color: #C3D0D8;
   --light-color: #FFFFFF;
+  --dark-color: #707070;
+}
+
+/* font types */
+.font-montserrat-bold {
+  font-family: Montserrat-Bold;
+}
+
+.font-montserrat-regular {
+  font-family: Montserrat-Regular;
+}
+
+/* colors */
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.light-color {
+  color: var(--light-color);
+}
+
+.dark-color {
+  color: var(--dark-color);
+}
+
+/* background colors */
+.primary-bg-color {
+  background-color: var(--primary-color);
 }
 
 /* flex box */
@@ -18,11 +50,62 @@
   justify-content: center;
 }
 
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+/* paddings */
+.px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.px-5 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.py-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 /* global reset */
 * {
   padding: 0;
   margin: 0;
   font-family: Questrial-Regular;
   font-size: 1.052rem;
-  line-height: auto;
+}
+
+@media (max-width: 414px) {
+  /* mobile paddings */
+  .px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .px-5 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .py-5 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }

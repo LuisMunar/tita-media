@@ -1,0 +1,15 @@
+.logo__icon {
+  height: 2.18rem;
+  width: 2.18rem;
+  margin: 0 1rem 0 0;
+}
+
+.logo__big-font {
+  letter-spacing: .18rem;
+  font-size: 1.188rem;
+}
+
+.logo__small-font {
+  letter-spacing: .18rem;
+  font-size: .5rem;
+}
