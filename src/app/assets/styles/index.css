@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #FF5672;
+  --secondary-color: #707070;
+  --light-color: #FFFFFF;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Questrial-Regular;
+  font-size: 1.052rem;
+  line-height: auto;
+}
