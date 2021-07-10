@@ -1,18 +1,18 @@
 import { Row, Col } from 'react-flexbox-grid'
-import { useSelector } from 'react-redux'
 
 import SideLeft from './SideLeft'
+import SideRight from './SideRight'
+
+import './index.css'
 
 const Navbar = () => {
-  const { validationsReducer } = useSelector(state => state)
-  
   return (
-    <Row className={ `${ validationsReducer ? 'p-2' : 'py-1 px-5'}` }>
+    <Row className="navbar">
       <Col xs={ 12 } md={ 6 } className="display-flex align-items-center justify-content-space-between">
         <SideLeft />
       </Col>
       <Col xs={ 12 } md={ 6 } className="display-flex align-items-center justify-content-center">
-        Links
+        <SideRight />
       </Col>
     </Row>
   )

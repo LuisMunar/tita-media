@@ -5,6 +5,7 @@ import { MAX_WIDTH_MOBILE } from './constants/validations'
 import { setIsMobileAction } from './redux/actions/validationsAction'
 import MainLayout from './layouts/MainLayout'
 import Routing from './routing'
+import { setStatusMenuAction } from './redux/actions/menuManagerAction'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -14,6 +15,7 @@ const App = () => {
   }
 
   dispatch(setIsMobileAction(validateIfIsMobile()))
+  dispatch(setStatusMenuAction(!validateIfIsMobile()))
 
   return (
     <Fragment>

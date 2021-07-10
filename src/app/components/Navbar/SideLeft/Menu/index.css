@@ -1,4 +1,11 @@
 .menu__icon {
-  height: 2rem;
-  width: 2rem;
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .menu__icon {
+    display: block;
+    height: 1.6rem;
+    width: 1.6rem;
+  }
 }
