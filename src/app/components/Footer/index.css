@@ -1,0 +1,10 @@
+.footer__text {
+  font-size: .813rem;
+  letter-spacing: .125rem;
+  margin: 0 0 2rem 0;
+}
+
+.footer__text--highlighted {
+  font-size: .813rem;
+  letter-spacing: .125rem;
+}

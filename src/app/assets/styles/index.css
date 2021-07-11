@@ -77,8 +77,26 @@
   padding-bottom: 1rem;
 }
 
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .p-2 {
   padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 5rem;
 }
 
 .px-5 {
@@ -99,7 +117,7 @@
 .button {
   border: none;
   outline: none;
-  padding: 1rem 2rem;
+  padding: .8rem 2rem;
   font-size: .65rem;
   letter-spacing: .125rem;
   transition: .2s ease-in-out 0s;
