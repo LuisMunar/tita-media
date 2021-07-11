@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { useTransition, animated, config } from 'react-spring'
 
@@ -7,9 +7,12 @@ import Menu from '../SideLeft/Menu'
 import SearchIcon from '../../../assets/images/icons/Search@2x.png'
 
 import './index.css'
+import { setStatusMenuAction } from '../../../redux/actions/menuManagerAction'
 
 const SideRight = () => {
   const { showMenu } = useSelector(state => state.menuManagerReducer)
+  const { isMobile } = useSelector(state => state.validationsReducer)
+  const dispatch = useDispatch()
 
   const pagesPath = [
     {
@@ -34,8 +37,23 @@ const SideRight = () => {
     }
   ]
 
+  const handlerStatusMenu = () => {
+    isMobile && dispatch(setStatusMenuAction(!showMenu))
+  }
+
   const renderPagesLinks = () => (
-    pagesPath.map((page) => <NavLink key={ page.text } exact to={ page.path } className="side-right__link" activeClassName="side-right__link--active">{ page.text }</NavLink>)
+    pagesPath.map((page) => (
+      <NavLink
+        key={ page.text }
+        exact
+        to={ page.path }
+        className="side-right__link"
+        activeClassName="side-right__link--active"
+        onClick={ () => handlerStatusMenu() }
+      >
+        { page.text }
+      </NavLink>
+    ))
   )
 
   const renderSideRight = () => (

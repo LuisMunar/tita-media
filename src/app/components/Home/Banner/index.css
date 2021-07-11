@@ -1,0 +1,43 @@
+.banner {
+  height: 88vh;
+  padding: 1rem;
+}
+
+.banner__title {
+  font-size: 2.4rem;
+  margin: 0 0 2rem 0;
+  letter-spacing: .18rem;
+  text-align: center;
+  width: 100%;
+}
+
+.banner__text {
+  font-size: 1rem;
+  letter-spacing: .125rem;
+  margin: 0 0 3rem 0;
+  width: 40%;
+  text-align: center;
+  text-align: center;
+}
+
+.banner__button {
+  width: auto;
+}
+
+@media(max-width: 768px) {
+  .banner {
+    height: 90vh;
+  }
+  
+  .banner__title {
+    font-size: 2rem;
+  }
+  
+  .banner__text {
+    width: 100%;
+  }
+  
+  .banner__button {
+    width: 100%;
+  }
+}
