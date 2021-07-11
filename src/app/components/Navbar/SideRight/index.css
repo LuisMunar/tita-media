@@ -9,19 +9,6 @@
   display: none;
 }
 
-.side-right__link {
-  color: var(--dark-color);
-  padding: .5rem 1.5rem;
-  text-decoration: none;
-  font-size: .875rem;
-  letter-spacing: .125rem;
-}
-
-.side-right__link--active {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-}
-
 .side-right__icon-search {
   height: 1.25rem;
   width: 1.25rem;
@@ -44,12 +31,6 @@
     justify-content: space-between;
     width: 100%;
     margin: 0 0 2rem 0;
-  }
-
-  .side-right__link {
-    padding: 1.3rem;
-    width: 100%;
-    text-align: center;
   }
   
   .side-right__icon-search {

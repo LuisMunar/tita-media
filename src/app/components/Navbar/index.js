@@ -12,7 +12,7 @@ const Navbar = () => {
         <SideLeft />
       </Col>
       <Col xs={ 12 } md={ 6 } className="display-flex align-items-center justify-content-center">
-        <SideRight showSearchIcon={ true } />
+        <SideRight />
       </Col>
     </Row>
   )

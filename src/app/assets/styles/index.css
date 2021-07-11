@@ -66,6 +66,10 @@
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 /* paddings */
 .px-1 {
   padding-left: 1rem;
@@ -119,6 +123,11 @@
 }
 
 /* others */
+/* .max-width {
+  width: 50% !important;
+  background-color: rebeccapurple;
+} */
+
 .cursor-pointer {
   cursor: pointer;
 }

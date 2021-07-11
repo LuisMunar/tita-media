@@ -1,59 +1,20 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import { useTransition, animated, config } from 'react-spring'
 
+import NavbarLink from './NavbarLink'
 import Logo from '../SideLeft/Logo'
 import Menu from '../SideLeft/Menu'
 import SearchIcon from '../../../assets/images/icons/Search@2x.png'
 
+import { PAGES_PATH } from '../../../constants/pageConstants'
+
 import './index.css'
-import { setStatusMenuAction } from '../../../redux/actions/menuManagerAction'
 
-const SideRight = ({ showSearchIcon }) => {
+const SideRight = () => {
   const { showMenu } = useSelector(state => state.menuManagerReducer)
-  const { isMobile } = useSelector(state => state.validationsReducer)
-  const dispatch = useDispatch()
-
-  const pagesPath = [
-    {
-      path: '/',
-      text: 'All'
-    },
-    {
-      path: '/branding',
-      text: 'Branding'
-    },
-    {
-      path: '/web',
-      text: 'Web'
-    },
-    {
-      path: '/photography',
-      text: 'Photography'
-    },
-    {
-      path: '/app',
-      text: 'App'
-    }
-  ]
-
-  const handlerStatusMenu = () => {
-    isMobile && dispatch(setStatusMenuAction(!showMenu))
-  }
 
   const renderPagesLinks = () => (
-    pagesPath.map((page) => (
-      <NavLink
-        key={ page.text }
-        exact
-        to={ page.path }
-        className="side-right__link"
-        activeClassName="side-right__link--active"
-        onClick={ () => handlerStatusMenu() }
-      >
-        { page.text }
-      </NavLink>
-    ))
+    PAGES_PATH.map((page) => <NavbarLink key={ page.name } dataPath={ page } handlerMenu={ true } />)
   )
 
   const renderSideRight = () => (
@@ -65,7 +26,7 @@ const SideRight = ({ showSearchIcon }) => {
 
       { renderPagesLinks() }
 
-      { showSearchIcon && <img src={ SearchIcon } alt="search" className="side-right__icon-search cursor-pointer" />}
+      <img src={ SearchIcon } alt="search" className="side-right__icon-search cursor-pointer" />
     </div>
   )
 

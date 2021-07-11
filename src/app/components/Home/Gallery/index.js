@@ -2,11 +2,15 @@ import { Row, Col } from 'react-flexbox-grid'
 
 import BlockIcon from '../../../assets/images/icons/Block@2x.png'
 import ColumnIcon from '../../../assets/images/icons/Column@2x.png'
-import SideRight from '../../Navbar/SideRight'
+import NavbarLink from '../../Navbar/SideRight/NavbarLink'
+
+import { PAGES_PATH } from '../../../constants/pageConstants'
 
 import './index.css'
 
 const Gallery = () => {
+  const renderPagesLinks = () => PAGES_PATH.map((dataPath, i) => <NavbarLink key={ `${ i }-${ dataPath.name }` } dataPath={ dataPath } handlerMenu={ false } />)
+
   return (
     <div>
       <Row>
@@ -17,8 +21,8 @@ const Gallery = () => {
       </Row>
 
       <Row className="mb-3">
-        <Col xs={ 12 } className="display-flex align-items-center justify-content-center">
-          <SideRight showSearchIcon={ false } />
+        <Col xs={ 12 } className="display-flex align-items-center justify-content-center flex-wrap">
+          { renderPagesLinks() }
         </Col>
       </Row>
 
