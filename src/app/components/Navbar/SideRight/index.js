@@ -9,7 +9,7 @@ import SearchIcon from '../../../assets/images/icons/Search@2x.png'
 import './index.css'
 import { setStatusMenuAction } from '../../../redux/actions/menuManagerAction'
 
-const SideRight = () => {
+const SideRight = ({ showSearchIcon }) => {
   const { showMenu } = useSelector(state => state.menuManagerReducer)
   const { isMobile } = useSelector(state => state.validationsReducer)
   const dispatch = useDispatch()
@@ -65,7 +65,7 @@ const SideRight = () => {
 
       { renderPagesLinks() }
 
-      <img src={ SearchIcon } alt="search" className="side-right__icon-search cursor-pointer" />
+      { showSearchIcon && <img src={ SearchIcon } alt="search" className="side-right__icon-search cursor-pointer" />}
     </div>
   )
 
